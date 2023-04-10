@@ -10,8 +10,30 @@
                 <h1 style="font-size: 32px;">Helaas!</h1>
                 <h2 style="font-size: 24px;">Morgen komt de oplossing online.</h2>
             </div>
+            <div style="margin: 15vh 0;">
+                <label for="emailInputBox" style="opacity: 0.6;">Email</label>
+                <div style="height: 42px; width: 350px;">
+                    <input id="emailInputBox" oninput="inputChanged()" type="email" style="height: 100%; width: 65%; border-radius: 5px; font-size: 18px; padding-left: 10px;" />
+                    <button id="submitEmailButton" onclick="submitEmail()" disabled style="height: 100%; width: 25%; background-color: blue; color: white; border: none; border-radius: 5px;">Verzenden</button>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <input type="checkbox" id="checkboxRules" name="rules" onclick="inputChanged()">
+                <label for="rules"> Ik ben 18+ en wil graag dagelijkse een mail ontvangen met een nieuwe oefening.</label>
+            </div>
         </section>
+        <script type="text/javascript">
+            function submitEmail() {
+            }
+            
+            function inputChanged() {
+                let email = document.getElementById('emailInputBox');
+                let emailButton = document.getElementById('submitEmailButton');
+                let checkboxEl = document.getElementById('checkboxRules');
 
+                emailButton.disabled = (email.value.length < 1) || !checkboxEl.checked;
+            }
+        </script>
     </body>
 
 </html>

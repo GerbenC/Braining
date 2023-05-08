@@ -7,9 +7,9 @@
     <body>
         <section style="display: flex; flex-direction: column; align-items: center;">
             <div style="text-align: center; font-size: 32px;">
-                <h1>Vul het volgende getal in de rij aan: 
+                <h1>10 eendjes gaan één voor één het water in, en komen er één na één terug uit. 
                     <br />
-                    2, 3, 5, 7, 11, ...
+                    Hoelang zijn de eendjes in het water geweest? (in minuten) 
                 </h1>
             </div>
             <div style="margin: 15vh 0;">
@@ -28,7 +28,7 @@
             function submitAnswer() {
                 let answer = document.getElementById('answerInputBox');
                 
-                if (answer.value === "13") {
+                if (answer.value === "2" || answer.value === "twee" || answer.value === "Twee") {
                     window.location.href = '/succes.html'
                 }
                 else {
